@@ -1,0 +1,9 @@
+.logo {
+	width: 42px;
+	height: 42px;
+	line-height: 40px;
+	text-align: center;
+	color: #ff8c00;
+	border-radius: 50%;
+	border: 1px solid #ff8c00;
+}

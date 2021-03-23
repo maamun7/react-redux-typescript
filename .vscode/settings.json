@@ -1,0 +1,171 @@
+{
+	"workbench.colorTheme": "Chester Atom",
+	"window.zoomLevel": 1,
+	"editor.fontSize": 14,
+	"editor.fontWeight": "530",
+	"editor.fontFamily": "Meslo LG DZ, Fira Code", //Monoid, Code New Roman, Fira Code //Have to install this font manually
+	"editor.fontLigatures": true,
+	"workbench.activityBar.visible": true,
+	"workbench.editor.enablePreview": false,
+	"files.autoSave": "onFocusChange",
+	"editor.detectIndentation": false,
+	"editor.insertSpaces": false,
+	"editor.tabSize": 4,
+	"php.suggest.basic": false, // To get useful suggestion instead of all basic suggestion, related to intelephense extension
+	"editor.quickSuggestions": { "comments": true }, //To activate code suggestions in comments
+	//.................................................
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+	"[javascript]": {
+		"editor.formatOnSave": false
+	},
+	"[css]": {
+		"editor.formatOnSave": true
+	},
+	"[javascriptreact]": {
+		"editor.formatOnSave": false
+	},
+	"prettier.disableLanguages": ["javascript", "javascriptreact"],
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true,
+		// "source.organizeImports": true,
+		"source.fixAll.stylelint": true
+	},
+	"emmet.triggerExpansionOnTab": true,
+	"emmet.includeLanguages": {
+		"javascript": "javascriptreact"
+	},
+	"eslint.alwaysShowStatus": true,
+	"eslint.validate": ["html", "javascript", "javascriptreact", "typescript", "typescriptreact"],
+	"cSpell.words": ["Medly"],
+	"javascript.validate.enable": false,
+	"bracketPairColorizer.colorMode": "Independent",
+	"bracketPairColorizer.independentPairColors": [
+		["()", ["White"], "Red"],
+		["[]", ["Orchid"], "Red"],
+		["{}", ["LightSkyBlue"], "Red"]
+	],
+	// ...........................................
+	"editor.tokenColorCustomizations": {
+		"textMateRules": [
+			{
+				"scope": [
+					//following will be in italic
+					"comment",
+					"entity.name.type.class", //class names
+					"constant", //String, Number, Boolean…, this, super
+					"storage.modifier", //static keyword
+					"storage.type.class.js", //class keyword
+					"keyword", //import, export, return…
+					"invalid",
+					"keyword.operator",
+					"constant.numeric.css",
+					"keyword.other.unit.px.css",
+					"constant.numeric.decimal.js",
+					"constant.numeric.json",
+					"entity.name.tag", //Html tag
+					"meta.tag", //Symfony twig form
+					"support.function",
+					"text source"
+				],
+				"settings": {
+					"fontStyle": "italic"
+				}
+			},
+			{
+				"scope": [
+					//following will be excluded from italics (VSCode has some defaults for italics)
+				],
+				"settings": {
+					"fontStyle": "italic"
+				}
+			},
+			{
+				"scope": [
+					"keyword", //import, export, return…, if, else, for
+					"keyword.operator.js",
+					"support.class"
+				],
+				"settings": {
+					"foreground": "#99cc00" //99cc00
+				}
+			},
+			{
+				"scope": [
+					"keyword.operator" // operator =,+,-...
+				],
+				"settings": {
+					"foreground": "#ac9c10"
+				}
+			},
+			{
+				"scope": [
+					"entity.name.function" // function name
+				],
+				"settings": {
+					"fontStyle": "italic",
+					"foreground": "#fdb62e" //9f6cb1/f65524/fdb62e
+				}
+			},
+			{
+				"scope": [
+					"variable", // $this
+					"punctuation"
+				],
+				"settings": {
+					"fontStyle": "italic",
+					"foreground": "#f65524" // cd5c5c
+				}
+			},
+			{
+				"scope": [
+					"variable.other",
+					"storage" // Public, Private, Protected etc,
+				],
+				"settings": {
+					"fontStyle": "italic",
+					"foreground": "#cc6600" // cc6600
+				}
+			},
+			{
+				"scope": ["string", "string", "string source", "string.unquoted"],
+				"settings": {
+					"fontStyle": "italic",
+					"foreground": "#207c3f" // 207c3f
+				}
+			},
+			{
+				"scope": [
+					"punctuation" // (), {}, [], $
+				],
+				"settings": {
+					"foreground": "#b84040" //b84040
+				}
+			},
+			{
+				"scope": "comment",
+				"settings": {
+					"foreground": "#686666"
+				}
+			},
+			{
+				"scope": [
+					"entity.name.type", // Php namespace
+					"text source"
+				],
+				"settings": {
+					"foreground": "#776223" //3a5c03
+				}
+			},
+			{
+				"scope": ["support.class", "entity.name.tag"],
+				"settings": {
+					"foreground": "#a8892b" //517714
+				}
+			}
+		]
+	},
+	"php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+	"php-cs-fixer.lastDownload": 1605930589316,
+	"workbench.settings.editor": "json"
+}

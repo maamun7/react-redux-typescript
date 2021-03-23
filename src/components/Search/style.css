@@ -1,0 +1,68 @@
+.top-search {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	box-sizing: border-box;
+	width: 84%;
+}
+
+.search-icon {
+	width: 10%;
+	padding: 7px;
+	background: #38383d;
+	color: grey;
+	font-size: 17px;
+	border: 1px solid grey;
+	border-right: none;
+	padding-right: none;
+	cursor: pointer;
+	box-sizing: border-box;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+.top-search button {
+	width: 10%;
+	padding: 7px;
+	background: #38383d;
+	color: grey;
+	font-size: 17px;
+	border: 1px solid grey;
+	border-left: none;
+	padding-right: none;
+	cursor: pointer;
+	box-sizing: border-box;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.top-search button:hover {
+	color: #f39c12;
+	background: rgba(42, 42, 46, 1);
+}
+
+.top-search input[type='text'] {
+	padding: 7px;
+	padding-left: 0px;
+	font-size: 14px;
+	border-top: 1px solid grey;
+	border-bottom: 1px solid grey;
+	border-right: none;
+	border-left: none;
+	width: 80%;
+	color: #fff;
+	font-size: 20px;
+	background: #38383d;
+	transition: 0.4s;
+	box-sizing: border-box;
+}
+
+.top-search input[type='text']:focus {
+	width: 80%;
+	box-sizing: border-box;
+	outline: none;
+}
+
+.top-search input[type='text']:focus ~ .locale-selection-wrapper {
+	display: block;
+}

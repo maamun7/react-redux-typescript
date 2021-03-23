@@ -1,0 +1,13 @@
+header {
+	background: rgba(42, 42, 46, 1);
+	padding: 0% 1%;
+	text-align: center;
+}
+
+.top-search-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	box-sizing: border-box;
+	justify-content: space-between;
+}
