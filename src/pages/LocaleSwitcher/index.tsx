@@ -14,6 +14,7 @@ import { appLocales } from '../../locales';
 import { changeLanguage } from '../LanguageWrapper/actions';
 import { makeSelectLocale } from '../LanguageWrapper/selectors';
 import styled from 'styled-components';
+import './style.css';
 
 const stateSelector = createSelector(makeSelectLocale(), locale => ({
 	locale
@@ -30,8 +31,8 @@ export default function LocaleSwitcher() {
 	const onLocaleSwitch = (evt: any) => dispatch(changeLanguage(evt.target.value));
 
 	return (
-		<Wrapper>
+		<div className="locale-selection-wrapper">
 			<Dropdown value={locale} values={appLocales} messages={messages} onSwitch={onLocaleSwitch} />
-		</Wrapper>
+		</div>
 	);
 }

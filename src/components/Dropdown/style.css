@@ -1,0 +1,16 @@
+.locale-selection {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+	outline: 0;
+	box-shadow: none;
+	border: 0 !important;
+	background: #38383d;
+	background-image: none;
+	color: #fff;
+	font-size: 20px;
+	flex: 1;
+	color: #fff;
+	cursor: pointer;
+}

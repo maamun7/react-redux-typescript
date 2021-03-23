@@ -1,10 +1,5 @@
-/**
- *
- * LocaleToggle
- *
- */
-
 import * as React from 'react';
+import './style.css';
 
 import DropdownOption from '../DropdownOption';
 
@@ -17,7 +12,7 @@ function Dropdown(props: any) {
 	}
 
 	return (
-		<select value={props.value} onChange={props.onSwitch}>
+		<select value={props.value} onChange={props.onSwitch} name="locale" className="locale-selection">
 			{content}
 		</select>
 	);

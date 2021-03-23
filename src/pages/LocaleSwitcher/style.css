@@ -1,0 +1,35 @@
+.locale-selection-wrapper {
+	width: 15%;
+	position: relative;
+	display: flex;
+	height: auto;
+	line-height: 2.5;
+	background: #38383d;
+	border: 1px solid grey;
+	overflow: hidden;
+	border-radius: 3px;
+	padding-left: 2px;
+}
+
+.locale-selection-wrapper::after {
+	content: '\25BC';
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0 1em;
+	background: rgba(42, 42, 46, 1);
+	color: grey;
+	cursor: pointer;
+	pointer-events: none;
+	-webkit-transition: 0.25s all ease;
+	-o-transition: 0.25s all ease;
+	transition: 0.25s all ease;
+}
+
+.locale-selection-wrapper::-ms-expand {
+	display: none;
+}
+
+.locale-selection-wrapper:hover::after {
+	color: #f39c12;
+}
