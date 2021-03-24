@@ -33,5 +33,6 @@ export interface ApplicationRootState {
 	readonly global: AppState;
 	readonly language: LanguageProviderState;
 	// for testing purposes
+	readonly recipe: any;
 	readonly test: any;
 }

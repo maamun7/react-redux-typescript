@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { injectIntl } from 'react-intl';
 import './style.css';
 
@@ -19,6 +20,13 @@ const Search = () => {
 
 		// Submit form
 	};
+
+	useEffect(() => {
+		if (searchKey && searchKey.trim().length >= 3) {
+			console.log('Updated', searchKey);
+			// onSubmitSearch();
+		}
+	}, [searchKey]);
 
 	return (
 		<form className="top-search" onSubmit={onSubmitSearch}>

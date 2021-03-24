@@ -2,23 +2,21 @@ import { Reducer } from 'redux';
 import { appActionTypes, AppState, AppActions } from './types';
 
 export const initialState: AppState = {
-    loading: false,
-    error: false,
-    success: true,
+	loading: false,
+	error: false,
+	success: true,
+	recipes: null
 };
 
-export const appReducer: Reducer<AppState, AppActions> = (
-    state = initialState,
-    { type, ...payload }
-) => {
-    switch (type) {
-        case appActionTypes.CHECK_SESSION:
-            return {
-                ...state,
-                ...payload,
-            };
+export const appReducer: Reducer<AppState, AppActions> = (state = initialState, { type, ...payload }) => {
+	switch (type) {
+		case appActionTypes.CHECK_SESSION:
+			return {
+				...state,
+				...payload
+			};
 
-        default:
-            return state;
-    }
+		default:
+			return state;
+	}
 };
