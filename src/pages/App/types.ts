@@ -4,7 +4,10 @@ export enum appActionTypes {
 	CHECK_SESSION = '@@app/CHECK_SESSION',
 	CHECK_SESSION_SUCCESS = '@@app/CHECK_SESSION_SUCCESS',
 	CHECK_SESSION_ERROR = '@@app/CHECK_SESSION_ERROR',
-	RECIPE = '@@app/RECIPE'
+	RECIPE = '@@app/RECIPE',
+	LOAD_RECIPES = '@@app/LOAD_RECIPES',
+	LOAD_RECIPES_ERROR = '@@app/LOAD_RECIPES_ERROR',
+	LOAD_RECIPES_SUCCESS = '@@app/LOAD_RECIPES_SUCCESS'
 }
 
 export interface AppState {
@@ -31,7 +34,7 @@ export interface CheckSessionAction extends Action {
 
 export interface GetRecipeAction extends Action {
 	searchKey: string;
-	type: typeof appActionTypes.RECIPE;
+	type: typeof appActionTypes.LOAD_RECIPES;
 }
 
-export type AppActions = CheckSessionAction;
+export type AppActions = CheckSessionAction | GetRecipeAction;

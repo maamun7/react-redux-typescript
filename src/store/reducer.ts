@@ -1,7 +1,8 @@
 // Combine all reducers in this file and export the combined reducers.
 import { connectRouter } from 'connected-react-router';
 import { combineReducers } from 'redux';
-import { appReducer } from '../pages/App/reducer';
+import appReducer from '../pages/App/reducer';
+import searchReducer from '../components/Search/reducer';
 import history from '../utils/history';
 import languageWrapperReducer from '../pages/LanguageWrapper/reducer';
 
@@ -10,6 +11,7 @@ import languageWrapperReducer from '../pages/LanguageWrapper/reducer';
 export default function createReducer(injectedReducers = {}): any {
 	const rootReducer = combineReducers({
 		app: appReducer,
+		searchReducer: searchReducer,
 		language: languageWrapperReducer,
 		router: connectRouter(history),
 		...injectedReducers
