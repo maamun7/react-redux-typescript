@@ -31,7 +31,7 @@ type AppAction = ActionType<typeof actions>;
 
 /* --- EXPORTS --- */
 
-type ContainerState = SearchState;
-type ContainerActions = AppAction;
+export type ContainerState = SearchState;
+export type ContainerActions = AppAction;
 
-export type { ContainerState, ContainerActions };
+// export type { ContainerState, ContainerActions };

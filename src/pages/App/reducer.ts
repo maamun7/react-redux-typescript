@@ -8,7 +8,7 @@ export const initialState: AppState = {
 	recipes: null
 };
 
-const appReducer: Reducer<AppState, AppActions> = (state = initialState, { type, ...payload }) => {
+const globalReducer: Reducer<AppState, AppActions> = (state = initialState, { type, ...payload }) => {
 	switch (type) {
 		case appActionTypes.CHECK_SESSION:
 			return {
@@ -29,4 +29,4 @@ const appReducer: Reducer<AppState, AppActions> = (state = initialState, { type,
 	}
 };
 
-export default appReducer;
+export default globalReducer;
