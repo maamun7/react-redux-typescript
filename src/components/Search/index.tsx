@@ -7,7 +7,7 @@ import searchReducer from './reducer';
 import saga from './saga';
 import './style.css';
 
-const key = 'recipe';
+const key = 'search';
 
 const Search = () => {
 	const dispatch = useDispatch();

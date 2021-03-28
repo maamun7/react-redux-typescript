@@ -4,6 +4,7 @@ import { SagaInjectionModes } from 'redux-injectors';
 import { Saga } from 'redux-saga';
 import { ContainerState as AppState } from '../pages/App/types';
 import { ContainerState as LanguageProviderState } from '../pages/LanguageWrapper/types';
+import { ContainerState as SearchState } from '../components/Search/types';
 
 export interface InjectedStoreParams extends Store {
 	injectedReducers: any;
@@ -32,7 +33,5 @@ export interface ApplicationRootState {
 	readonly router: RouterState;
 	readonly global: AppState;
 	readonly language: LanguageProviderState;
-	// for testing purposes
-	readonly recipe: any;
-	readonly test: any;
+	readonly search: SearchState;
 }

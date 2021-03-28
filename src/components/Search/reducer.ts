@@ -12,15 +12,12 @@ export const initialState: ContainerState = {
 function searchReducer(state: ContainerState = initialState, action: ContainerActions): ContainerState {
 	switch (action.type) {
 		case ActionTypes.CHANGE_RECIPE_NAME:
-			console.log('reducer-changing-name :', action.payload.recipeName);
 			return {
 				loading: false,
 				recipeName: action.payload.recipeName
 			};
 
 		case ActionTypes.LOAD_RECIPES:
-			console.log('Type : ', ActionTypes.LOAD_RECIPES);
-
 			return {
 				loading: true,
 				error: false,

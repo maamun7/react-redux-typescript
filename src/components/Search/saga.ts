@@ -5,15 +5,15 @@ import ActionTypes from './constants';
 import request from '../../utils/http-request';
 
 export function* getRecipes(): any {
-	const searchKey = yield select(getSelectedRecipeName());
-	const requestURL = `https://api.github.com/users/${searchKey}/repos?type=all&sort=updated`;
+	const recipeName = yield select(getSelectedRecipeName());
+	const requestURL = `${ActionTypes.RECIPES_URL}=${recipeName}&p=3`;
 	// Select username from store
-
-	console.log('saga : ', searchKey);
-
 	try {
 		const recipes = yield call(request, requestURL);
-		yield put(loadedRecipe(recipes, searchKey));
+
+		console.log('recipes : ', recipes);
+
+		yield put(loadedRecipe(recipes, recipeName));
 	} catch (err) {
 		yield put(loadingRecipeError(err));
 	}
