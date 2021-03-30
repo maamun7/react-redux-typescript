@@ -47,10 +47,11 @@ function checkStatus(response: Response) {
  */
 export default async function request(url: string, options?: RequestInit): Promise<{} | { err: ResponseError }> {
 	const fetchResponse = await fetch(url, {
-		method: 'GET',
+		mode: 'no-cors'
+		/* method: 'GET',
 		headers: {
 			'Content-Type': 'application/json'
-		}
+		} */
 	});
 	const response = await checkStatus(fetchResponse);
 	return parseJSON(response);
