@@ -2,8 +2,8 @@ import { createSelector } from 'reselect';
 import { ApplicationRootState } from 'types';
 import { initialState } from './reducer';
 
-const selectGlobal = (state: ApplicationRootState) => state.search || initialState;
+const selectGlobal = (state: ApplicationRootState) => state.global || initialState;
 
-//const makeSelectRecipe = () => createSelector(selectGlobal, globalState => globalState.search);
+const makeSelectRecipes = () => createSelector(selectGlobal, globalState => globalState.recipeData.recipes);
 
-export { selectGlobal };
+export { selectGlobal, makeSelectRecipes };

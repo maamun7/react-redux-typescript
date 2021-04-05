@@ -13,7 +13,7 @@ export function* getRecipes(): any {
 
 		console.log('recipes : ', recipes);
 
-		yield put(loadedRecipe(recipes));
+		yield put(loadedRecipe(recipes, recipeName));
 	} catch (err) {
 		yield put(loadingRecipeError(err));
 	}

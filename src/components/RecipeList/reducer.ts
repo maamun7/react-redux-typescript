@@ -27,6 +27,16 @@ function searchReducer(state: ContainerState = initialState, action: ContainerAc
 				}
 			};
 
+		case ActionTypes.LOAD_RECIPES_SUCCESS:
+			return {
+				loading: false,
+				error: state.error,
+				recipeName: action.payload.recipeName,
+				recipeData: {
+					recipes: action.payload.recipes
+				}
+			};
+
 		case ActionTypes.LOAD_RECIPES_ERROR:
 			const { error, loading, ...rest } = state;
 			return {

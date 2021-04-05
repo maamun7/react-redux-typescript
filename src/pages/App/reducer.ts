@@ -1,32 +1,27 @@
 import { Reducer } from 'redux';
-import { appActionTypes, AppState, AppActions } from './types';
+import { appActionTypes, ContainerState as AppState, ContainerActions as AppActions } from './types';
 
 export const initialState: AppState = {
 	loading: false,
 	error: false,
 	success: true,
-	recipes: null
+	recipeData: {
+		recipes: []
+	}
 };
 
-const globalReducer: Reducer<AppState, AppActions> = (state = initialState, { type, ...payload }) => {
-	switch (type) {
-		case appActionTypes.CHECK_SESSION:
+export default function globalReducer(state: AppState = initialState, action: AppActions): AppState {
+	switch (action.type) {
+		case appActionTypes.LOAD_RECIPES_SUCCESS:
 			return {
-				...state,
-				...payload
-			};
-
-		case appActionTypes.LOAD_RECIPES:
-			console.log('switch type : ', payload);
-
-			return {
-				...state,
-				...payload
+				loading: false,
+				error: false,
+				recipeData: {
+					recipes: state.recipeData.recipes
+				}
 			};
 
 		default:
 			return state;
 	}
-};
-
-export default globalReducer;
+}

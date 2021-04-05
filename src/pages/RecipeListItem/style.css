@@ -1,0 +1,22 @@
+#recipe-section {
+	padding: 1%;
+	background: #595b83;
+}
+
+.thumbnail {
+	padding: 1px;
+}
+
+.thumbnail img {
+	float: right;
+}
+
+.recipe {
+	padding: 5px 0px;
+	text-align: center;
+	color: #fff;
+}
+
+.recipe p {
+	font-size: 13px;
+}

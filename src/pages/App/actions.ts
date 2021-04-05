@@ -11,4 +11,4 @@ export const loadRecipes = (searchKey: string) => action(appActionTypes.LOAD_REC
 export const recipesLoaded = (recipes: any, searchKey: string) =>
 	action(appActionTypes.LOAD_RECIPES_SUCCESS, { recipes: recipes, searchKey: searchKey });
 
-export const recipeLoadingError = (error: object) => action(appActionTypes.LOAD_RECIPES_ERROR, error);
+// export const recipeLoadingError = (error: object) => action(appActionTypes.LOAD_RECIPES_ERROR, error);

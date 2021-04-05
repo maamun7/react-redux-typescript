@@ -1,30 +1,29 @@
+import { ActionType } from 'typesafe-actions';
 import { Action } from 'redux';
+import * as actions from './actions';
 
 export enum appActionTypes {
 	CHECK_SESSION = '@@app/CHECK_SESSION',
 	CHECK_SESSION_SUCCESS = '@@app/CHECK_SESSION_SUCCESS',
 	CHECK_SESSION_ERROR = '@@app/CHECK_SESSION_ERROR',
-	RECIPE = '@@app/RECIPE',
 	LOAD_RECIPES = '@@app/LOAD_RECIPES',
-	LOAD_RECIPES_ERROR = '@@app/LOAD_RECIPES_ERROR',
-	LOAD_RECIPES_SUCCESS = '@@app/LOAD_RECIPES_SUCCESS'
+	LOAD_RECIPES_SUCCESS = 'project/App/LOAD_RECIPES_SUCCESS'
 }
 
 export interface AppState {
 	readonly loading: boolean;
 	readonly error?: object | boolean;
 	readonly success?: object | boolean;
-	readonly recipes?: [];
+	readonly recipeData?: RecipeData;
 }
 
-export interface ContainerState {
+/* export interface ContainerState {
 	readonly app: any;
 	readonly router: any;
-}
+} */
 
-export interface recipeData {
+export interface RecipeData {
 	readonly recipes?: [];
-	//www.recipepuppy.com/api/?q=chicken grill&p=93
 }
 
 export interface CheckSessionAction extends Action {
@@ -37,4 +36,12 @@ export interface GetRecipeAction extends Action {
 	type: typeof appActionTypes.LOAD_RECIPES;
 }
 
-export type AppActions = CheckSessionAction | GetRecipeAction;
+// export type AppActions = CheckSessionAction | GetRecipeAction | recipeData;
+
+/* --- ACTIONS --- */
+type AppAction = ActionType<typeof actions>;
+
+/* --- EXPORTS --- */
+
+export type ContainerState = AppState;
+export type ContainerActions = AppAction;
