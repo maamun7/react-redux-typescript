@@ -15,10 +15,13 @@ export function* getRecipes(): any {
 
 		yield put(loadedRecipe(recipes));
 	} catch (err) {
+		console.log('err :', err);
 		yield put(loadingRecipeError(err));
 	}
 }
 
 export default function* recipeData() {
+	console.log('Calling : recipeData');
+
 	yield takeLatest(ActionTypes.LOAD_RECIPES, getRecipes);
 }

@@ -16,7 +16,7 @@ export const Home: React.FC = () => {
 		recipes: recipes
 	};
 
-	console.log('DEBUGG : ', recipeListProps);
+	console.log('recipeListProps : ', recipeListProps);
 
 	return (
 		<div className="wrap">

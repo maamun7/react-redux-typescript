@@ -13,12 +13,22 @@ export const initialState: AppState = {
 export default function globalReducer(state: AppState = initialState, action: AppActions): AppState {
 	switch (action.type) {
 		case appActionTypes.LOAD_RECIPES_SUCCESS:
+			console.log('LOAD_RECIPES_SUCCESS : ', appActionTypes.LOAD_RECIPES_SUCCESS);
 			return {
 				loading: false,
 				error: false,
 				recipeData: {
-					recipes: state.recipeData.recipes
+					recipes: action.payload.recipes
 				}
+			};
+
+		case appActionTypes.LOAD_RECIPES_ERROR:
+			console.log('LOAD_RECIPES_ERROR : ', appActionTypes.LOAD_RECIPES_ERROR);
+			const { error, loading, ...rest } = state;
+			return {
+				error: action.payload,
+				loading: false,
+				...rest
 			};
 
 		default:

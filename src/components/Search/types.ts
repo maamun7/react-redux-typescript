@@ -18,7 +18,7 @@ export interface SearchState {
 	readonly success?: object | boolean;
 	readonly search?: SearchType;
 	readonly recipeName?: string;
-	readonly recipeData?: recipeData;
+	// readonly recipeData?: recipeData;
 }
 
 export interface recipeData {

@@ -4,10 +4,9 @@ import * as actions from './actions';
 
 export enum appActionTypes {
 	CHECK_SESSION = '@@app/CHECK_SESSION',
-	CHECK_SESSION_SUCCESS = '@@app/CHECK_SESSION_SUCCESS',
-	CHECK_SESSION_ERROR = '@@app/CHECK_SESSION_ERROR',
-	LOAD_RECIPES = '@@app/LOAD_RECIPES',
-	LOAD_RECIPES_SUCCESS = 'project/App/LOAD_RECIPES_SUCCESS'
+	LOAD_RECIPES = 'project/App/LOAD_RECIPES',
+	LOAD_RECIPES_SUCCESS = 'project/App/LOAD_RECIPES_SUCCESS',
+	LOAD_RECIPES_ERROR = 'project/App/LOAD_RECIPES_ERROR'
 }
 
 export interface AppState {

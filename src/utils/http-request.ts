@@ -32,6 +32,8 @@ function checkStatus(response: Response) {
 		return response;
 	}
 
+	console.log('response : ', response);
+
 	const error = new ResponseError(response);
 	error.response = response;
 	throw error;
@@ -53,6 +55,8 @@ export default async function request(url: string, options?: RequestInit): Promi
 			'Content-Type': 'application/json'
 		} */
 	});
+
 	const response = await checkStatus(fetchResponse);
+
 	return parseJSON(response);
 }
