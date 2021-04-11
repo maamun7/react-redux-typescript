@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export class ResponseError extends Error {
 	public response: Response;
 
@@ -18,9 +20,7 @@ function parseJSON(response: Response) {
 		return null;
 	}
 
-	//	console.log('responseE : ', response.text());
-
-	return response.text();
+	return response.json();
 }
 
 /**
@@ -30,7 +30,7 @@ function parseJSON(response: Response) {
  *
  * @return {object|undefined} Returns either the response, or throws an error
  */
-function checkStatus(response: Response) {
+function checkStatus(response: any) {
 	if (response.status >= 200 && response.status < 300) {
 		return response;
 	}
@@ -60,3 +60,11 @@ export default async function request(url: string, options?: RequestInit): Promi
 
 	return parseJSON(response);
 }
+
+export const getRequest = async (url: string, options?: RequestInit): Promise<{} | { err: ResponseError }> => {
+	const fetchResponse = await axios.get(url);
+
+	const response = await checkStatus(fetchResponse);
+
+	return parseJSON(response);
+};

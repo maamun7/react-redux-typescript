@@ -13,7 +13,6 @@ export const initialState: AppState = {
 export default function globalReducer(state: AppState = initialState, action: AppActions): AppState {
 	switch (action.type) {
 		case appActionTypes.LOAD_RECIPES_SUCCESS:
-			console.log('LOAD_RECIPES_SUCCESS : ', appActionTypes.LOAD_RECIPES_SUCCESS);
 			return {
 				loading: false,
 				error: false,

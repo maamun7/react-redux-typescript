@@ -11,8 +11,6 @@ export function* getRecipes(): any {
 	try {
 		const recipes = yield call(request, requestURL);
 
-		console.log('recipes : ', recipes);
-
 		yield put(loadedRecipe(recipes));
 	} catch (err) {
 		console.log('err :', err);
@@ -21,7 +19,5 @@ export function* getRecipes(): any {
 }
 
 export default function* recipeData() {
-	console.log('Calling : recipeData');
-
 	yield takeLatest(ActionTypes.LOAD_RECIPES, getRecipes);
 }
