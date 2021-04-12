@@ -8,6 +8,7 @@ import { ThemeProvider } from 'styled-components';
 import theme from './theme';
 import Home from '../Home';
 import './style.css';
+import Footer from '../../components/Layouts/Footer';
 
 const AppWrapper = styled.div`
 	max-width: calc(768px + 16px * 2);
@@ -28,6 +29,8 @@ export const App: React.FC = () => {
 			<main>
 				<Home />
 			</main>
+
+			<Footer />
 		</div>
 	);
 };

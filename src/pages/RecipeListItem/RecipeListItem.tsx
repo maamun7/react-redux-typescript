@@ -1,6 +1,9 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root';
+import { FormattedMessage } from 'react-intl';
 import ListItem from '../../components/RecipeList/ListItem';
+import messages from './messages';
+
 import './style.css';
 
 interface Recipe {
@@ -32,7 +35,9 @@ export const RecipeListItem = ({ item }: Props) => {
 					<h3> {item.title} </h3>
 					<br />
 					<div>
-						<h5>Ingredients :</h5>
+						<h5>
+							<FormattedMessage {...messages.ingredients} /> :
+						</h5>
 						<p> {item.ingredients} </p>
 					</div>
 					<br />

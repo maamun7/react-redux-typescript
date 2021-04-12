@@ -1,5 +1,6 @@
 {
 	"project.pages.LocaleSwitcher.bn": "বাংলা",
 	"project.pages.LocaleSwitcher.en": "ইংরেজী",
-	"project.components.Header.name": "হোম"
+	"project.components.Header.name": "হোম",
+	"project.components.RecipeList.ingredients": "ইনগ্রেডিয়েন্টেস"
 }

@@ -1,0 +1,36 @@
+footer {
+	background: rgba(42, 42, 46, 1);
+	padding: 1%;
+	color: white;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+
+footer p {
+	font-size: 0.8rem;
+	line-height: 32px;
+	text-align: left;
+}
+
+.social-menus {
+	text-align: right;
+}
+
+.icon-style {
+	color: white;
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	border-radius: 50%;
+	border: 1px solid white;
+	margin: 0 10px;
+	transition: 0.4s;
+	text-align: center;
+}
+
+.icon-style:hover {
+	background-color: grey;
+	transform: scale(1.2);
+}
