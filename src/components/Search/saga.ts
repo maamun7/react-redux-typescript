@@ -9,11 +9,10 @@ export function* getRecipes(): any {
 	const requestURL = `${ActionTypes.RECIPES_URL}=${recipeName}&p=3`;
 	// Select username from store
 	try {
-		const recipes = yield call(request, requestURL);
+		const { results: recipes } = yield call(request, requestURL);
 
 		yield put(loadedRecipe(recipes));
 	} catch (err) {
-		console.log('err :', err);
 		yield put(loadingRecipeError(err));
 	}
 }

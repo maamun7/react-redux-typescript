@@ -4,8 +4,10 @@ import List from './List/';
 
 // export type RecipeListProps = Pick<ContainerState, 'loading' | 'error'> & Pick<RecipeData, 'recipes'>;
 
-export default function RecipeList({ recipes }: { recipes: any }) {
+const recipeList = ({ recipes }: { recipes: any }) => {
 	console.log('RecipeList : ', recipes);
 
-	return <List component={RecipeListItem} />;
-}
+	return <List items={recipes} component={RecipeListItem} />;
+};
+
+export default recipeList;

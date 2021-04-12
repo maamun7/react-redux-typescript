@@ -12,7 +12,11 @@ const List = (props: Props) => {
 	content = <ComponentToRender item="{}" />;
 
 	if (props.items) {
-		content = props.items.map(item => <ComponentToRender key={`item-${item}`} item={item} />);
+		content = props.items.map(item => {
+			if (item['thumbnail'] != '') {
+				return <ComponentToRender key={`item-${item['title']}`} item={item} />;
+			}
+		});
 	} else {
 		content = <ComponentToRender />;
 	}

@@ -16,11 +16,6 @@ export interface AppState {
 	readonly recipeData?: RecipeData;
 }
 
-/* export interface ContainerState {
-	readonly app: any;
-	readonly router: any;
-} */
-
 export interface RecipeData {
 	readonly recipes?: [];
 }
