@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { trackPromise } from 'react-promise-tracker';
 
 export class ResponseError extends Error {
 	public response: Response;
@@ -49,12 +50,14 @@ function checkStatus(response: any) {
  * @return {object}           The response data
  */
 export default async function request(url: string, options?: RequestInit): Promise<{} | { err: ResponseError }> {
-	const fetchResponse = await fetch(url, {
-		method: 'GET',
-		headers: {
-			'Content-Type': 'application/json'
-		}
-	});
+	const fetchResponse = await trackPromise(
+		fetch(url, {
+			method: 'GET',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		})
+	);
 
 	const response = await checkStatus(fetchResponse);
 
@@ -65,6 +68,8 @@ export const getRequest = async (url: string, options?: RequestInit): Promise<{}
 	const fetchResponse = await axios.get(url);
 
 	const response = await checkStatus(fetchResponse);
+
+	console.log('response : ', fetchResponse);
 
 	return parseJSON(response);
 };

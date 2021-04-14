@@ -12,6 +12,18 @@ export const initialState: AppState = {
 
 export default function globalReducer(state: AppState = initialState, action: AppActions): AppState {
 	switch (action.type) {
+		case appActionTypes.START_LOADER:
+			console.log('START_LOADER : ', appActionTypes.START_LOADER);
+			return {
+				loading: true
+			};
+
+		case appActionTypes.COMPLETE_LOADER:
+			console.log('COMPLETE_LOADER : ', appActionTypes.COMPLETE_LOADER);
+			return {
+				loading: false
+			};
+
 		case appActionTypes.LOAD_RECIPES_SUCCESS:
 			return {
 				loading: false,

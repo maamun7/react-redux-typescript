@@ -4,6 +4,8 @@ import * as actions from './actions';
 
 export enum appActionTypes {
 	CHECK_SESSION = '@@app/CHECK_SESSION',
+	START_LOADER = 'project/App/START_LOADER',
+	COMPLETE_LOADER = 'project/App/COMPLETE_LOADER',
 	LOAD_RECIPES = 'project/App/LOAD_RECIPES',
 	LOAD_RECIPES_SUCCESS = 'project/App/LOAD_RECIPES_SUCCESS',
 	LOAD_RECIPES_ERROR = 'project/App/LOAD_RECIPES_ERROR'

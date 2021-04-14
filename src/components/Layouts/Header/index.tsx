@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { lazy } from 'react';
 import { FormattedMessage } from 'react-intl';
 import LocaleSwitcher from '../../../pages/LocaleSwitcher';
 import Search from '../../Search';
 import Logo from '../../Logo';
 import messages from './messages';
 import './style.css';
+
+// const Search = lazy(() => import('../../Search'));
 
 export const Header: React.FC = () => {
 	return (

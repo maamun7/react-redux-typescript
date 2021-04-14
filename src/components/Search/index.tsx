@@ -25,7 +25,6 @@ const Search = () => {
 			return;
 		}
 
-		console.log('Submit:', recipeName);
 		// Submit form
 		dispatch(loadRecipe());
 	};

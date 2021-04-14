@@ -1,13 +1,22 @@
 import * as React from 'react';
 import RecipeListItem from '../../pages/RecipeListItem';
+import ListItem from '../RecipeList/ListItem';
 import List from './List/';
 
 // export type RecipeListProps = Pick<ContainerState, 'loading' | 'error'> & Pick<RecipeData, 'recipes'>;
 
-const recipeList = ({ recipes }: { recipes: any }) => {
+const RecipeList = ({ recipes, error }: { recipes: any; error: any }) => {
 	console.log('RecipeList : ', recipes);
 
-	return <List items={recipes} component={RecipeListItem} />;
+	if (error !== false) {
+		const ErrorComponent = () => <ListItem item="Something went wrong, please try again!" />;
+
+		return <List component={ErrorComponent} />;
+	}
+
+	if (recipes !== undefined) {
+		return <List items={recipes} component={RecipeListItem} />;
+	}
 };
 
-export default recipeList;
+export default RecipeList;

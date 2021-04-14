@@ -13,7 +13,8 @@ export const Home: React.FC = () => {
 	const { recipes } = useSelector(stateSelector);
 
 	const recipeListProps = {
-		recipes: recipes
+		recipes: recipes,
+		error: false
 	};
 
 	// console.log('recipes : ', recipes);

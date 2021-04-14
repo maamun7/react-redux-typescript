@@ -6,6 +6,9 @@ export const checkSession = (userName: string): CheckSessionAction => ({
 	type: appActionTypes.CHECK_SESSION
 });
 
+export const startLoader = () => action(appActionTypes.START_LOADER, true);
+export const completeLoader = () => action(appActionTypes.COMPLETE_LOADER, false);
+
 export const loadRecipes = (searchKey: string) => action(appActionTypes.LOAD_RECIPES, searchKey);
 
 export const recipesLoaded = (recipes: any, searchKey: string) =>

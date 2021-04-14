@@ -9,8 +9,6 @@ const List = (props: Props) => {
 	const ComponentToRender = props.component;
 	let content = (<div />) as JSX.Element | JSX.Element[];
 
-	content = <ComponentToRender item="{}" />;
-
 	if (props.items) {
 		content = props.items.map(item => {
 			if (item['thumbnail'] != '') {

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { hot } from 'react-hot-loader/root';
 import Header from '../../components/Layouts/Header';
-import LocaleSwitcher from '../LocaleSwitcher';
+import LoadingIndicator from '../../components/LoadingIndicator';
 import styled from 'styled-components';
 import { ThemeProvider } from 'styled-components';
 import theme from './theme';
@@ -28,6 +28,7 @@ export const App: React.FC = () => {
 			<Header />
 			<main>
 				<Home />
+				<LoadingIndicator />
 			</main>
 
 			<Footer />
