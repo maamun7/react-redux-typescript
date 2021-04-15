@@ -9,7 +9,7 @@ export const LoadingIndicator = () => {
 	return (
 		promiseInProgress && (
 			<span className="spinner">
-				<Loader type="Circles" color="#00BFFF" height="100" width="100" />
+				<Loader type="Circles" color="#38383d" height="100" width="100" />
 			</span>
 		)
 	);

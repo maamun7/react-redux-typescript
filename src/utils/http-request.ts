@@ -21,7 +21,9 @@ function parseJSON(response: Response) {
 		return null;
 	}
 
-	return response.json();
+	// return response.json(); // fetch
+
+	return response;
 }
 
 /**
@@ -49,7 +51,7 @@ function checkStatus(response: any) {
  *
  * @return {object}           The response data
  */
-export default async function request(url: string, options?: RequestInit): Promise<{} | { err: ResponseError }> {
+export async function getRequest(url: string, options?: RequestInit): Promise<{} | { err: ResponseError }> {
 	const fetchResponse = await trackPromise(
 		fetch(url, {
 			method: 'GET',
@@ -64,12 +66,12 @@ export default async function request(url: string, options?: RequestInit): Promi
 	return parseJSON(response);
 }
 
-export const getRequest = async (url: string, options?: RequestInit): Promise<{} | { err: ResponseError }> => {
-	const fetchResponse = await axios.get(url);
+export const request = async (url: string, options?: RequestInit): Promise<{} | { err: ResponseError }> => {
+	const fetchResponse = await trackPromise(axios.get(url));
 
-	const response = await checkStatus(fetchResponse);
-
-	console.log('response : ', fetchResponse);
+	const { data: response } = await checkStatus(fetchResponse);
 
 	return parseJSON(response);
 };
+
+export default request;
