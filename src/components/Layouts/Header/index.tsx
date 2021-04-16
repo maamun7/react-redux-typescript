@@ -1,6 +1,6 @@
 import React, { lazy } from 'react';
 import { FormattedMessage } from 'react-intl';
-import LocaleSwitcher from '../../../pages/LocaleSwitcher';
+import LocaleSwitcher from '../../../containers/LocaleSwitcher';
 import Search from '../../Search';
 import Logo from '../../Logo';
 import messages from './messages';

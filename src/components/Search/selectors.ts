@@ -4,7 +4,6 @@ import { initialState } from './reducer';
 
 const selectSearch = (state: ApplicationRootState) => state.search || initialState;
 
-const getSelectedRecipeName = () => createSelector(selectSearch, subState => subState.recipeName);
-//const getSelectedRecipes = () => createSelector(selectSearch, subState => subState.recipeData);
+const getSelectedSearchKey = () => createSelector(selectSearch, subState => subState.searchKey);
 
-export { selectSearch, getSelectedRecipeName };
+export { selectSearch, getSelectedSearchKey };

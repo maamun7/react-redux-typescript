@@ -1,14 +1,14 @@
 import { call, put, select, takeLatest } from 'redux-saga/effects';
-import { loadedRecipe, loadingRecipeError } from './actions';
-import { startLoader, completeLoader } from '../../pages/App/actions';
-import { getSelectedRecipeName } from './selectors';
+import { loadedRecipe, loadingRecipeError } from '../../containers/Recipe/actions';
+import { checkSession } from '../../containers/App/actions';
+import { getSelectedSearchKey } from './selectors';
 import ActionTypes from './constants';
 import request from '../../utils/http-request';
 
 export function* getRecipes(): any {
 	// Select username from store
-	const recipeName = yield select(getSelectedRecipeName());
-	const requestURL = `${ActionTypes.RECIPES_URL}=${recipeName}&p=3`;
+	const searchKey = yield select(getSelectedSearchKey());
+	const requestURL = `${ActionTypes.RECIPES_URL}=${searchKey}&p=3`;
 
 	try {
 		const { results: recipes } = yield call(request, requestURL);

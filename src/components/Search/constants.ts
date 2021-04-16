@@ -1,9 +1,7 @@
 /* Search Constants */
-enum ActionTypes {
-	CHANGE_RECIPE_NAME = 'project/App/CHANGE_RECIPE_NAME',
-	LOAD_RECIPES = 'project/App/LOAD_RECIPES',
-	LOAD_RECIPES_SUCCESS = 'project/App/LOAD_RECIPES_SUCCESS',
-	LOAD_RECIPES_ERROR = 'project/App/LOAD_RECIPES_ERROR',
+export enum ActionTypes {
+	CHANGE_SEARCH_KEY = 'Project/Search/CHANGE_SEARCH_KEY',
+	LOAD_RECIPES = 'Project/Search/LOAD_RECIPES',
 	RECIPES_URL = 'http://www.recipepuppy.com/api/?q'
 }
 

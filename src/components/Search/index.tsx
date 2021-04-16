@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { injectIntl } from 'react-intl';
 import { useInjectReducer, useInjectSaga } from 'utils/redux-injectors';
-import { loadRecipe, changeRecipeName } from './actions';
+import { loadRecipe, changeSearchKey } from './actions';
 import searchReducer from './reducer';
 import saga from './saga';
 import './style.css';
@@ -11,9 +11,9 @@ const key = 'search';
 
 const Search = () => {
 	const dispatch = useDispatch();
-	const [recipeName, setRecipeName] = useState('');
+	const [searchKey, setSearchKey] = useState('');
 	const onChangeSearchKey = (evt: any) => {
-		setRecipeName(evt.target.value);
+		setSearchKey(evt.target.value);
 	};
 
 	const onSubmitSearch = (evt?: any) => {
@@ -21,7 +21,7 @@ const Search = () => {
 			evt.preventDefault();
 		}
 
-		if (recipeName.trim().length < 3) {
+		if (searchKey.trim().length < 3) {
 			return;
 		}
 
@@ -33,10 +33,10 @@ const Search = () => {
 	useInjectSaga({ key: key, saga: saga });
 
 	useEffect(() => {
-		if (recipeName && recipeName.trim().length >= 3) {
-			dispatch(changeRecipeName(recipeName));
+		if (searchKey && searchKey.trim().length >= 3) {
+			dispatch(changeSearchKey(searchKey));
 		}
-	}, [recipeName, dispatch]);
+	}, [searchKey, dispatch]);
 
 	return (
 		<form className="top-search" onSubmit={onSubmitSearch}>

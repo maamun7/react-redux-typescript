@@ -1,10 +1,5 @@
 import { action } from 'typesafe-actions';
 import ActionTypes from './constants';
 
-export const changeRecipeName = (recipeName: string) => action(ActionTypes.CHANGE_RECIPE_NAME, { recipeName: recipeName });
-
+export const changeSearchKey = (searchKey: string) => action(ActionTypes.CHANGE_SEARCH_KEY, { searchKey: searchKey });
 export const loadRecipe = () => action(ActionTypes.LOAD_RECIPES);
-
-export const loadedRecipe = (recipes: any) => action(ActionTypes.LOAD_RECIPES_SUCCESS, { recipes: recipes });
-
-export const loadingRecipeError = (error: object) => action(ActionTypes.LOAD_RECIPES_ERROR, error);

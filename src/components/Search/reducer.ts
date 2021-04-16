@@ -1,17 +1,15 @@
-import { ContainerState, ContainerActions, ActionTypes } from './types';
+import { ContainerState as SearchState, ContainerActions as SearchAction } from './types';
+import ActionTypes from './constants';
 
-export const initialState: ContainerState = {
-	loading: false,
-	error: false,
-	recipeName: ''
+export const initialState: SearchState = {
+	searchKey: ''
 };
 
-const searchReducer = (state: ContainerState = initialState, action: ContainerActions): ContainerState => {
+const searchReducer = (state: SearchState = initialState, action: SearchAction): SearchState => {
 	switch (action.type) {
-		case ActionTypes.CHANGE_RECIPE_NAME:
+		case ActionTypes.CHANGE_SEARCH_KEY:
 			return {
-				loading: false,
-				recipeName: action.payload.recipeName
+				searchKey: action.payload.searchKey
 			};
 
 		default:
