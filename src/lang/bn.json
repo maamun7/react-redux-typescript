@@ -2,5 +2,7 @@
 	"project.pages.LocaleSwitcher.bn": "বাংলা",
 	"project.pages.LocaleSwitcher.en": "ইংরেজী",
 	"project.components.Header.name": "হোম",
-	"project.components.RecipeList.ingredients": "ইনগ্রেডিয়েন্টেস"
+	"project.components.RecipeList.ingredients": "ইনগ্রেডিয়েন্টেস",
+	"project.components.RecipeList.errorMsg": "কোথায় ও সমস্যা হয়েছে, আবার চেষ্টা করুন!",
+	"project.components.RecipeList.notFoundMsg": "কোন রেসিপি খুঁজে পাওয়া যায়নি!"
 }

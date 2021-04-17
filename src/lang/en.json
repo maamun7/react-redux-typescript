@@ -2,5 +2,7 @@
 	"project.pages.LocaleSwitcher.bn": "Bangla",
 	"project.pages.LocaleSwitcher.en": "English",
 	"project.components.Header.name": "Home",
-	"project.components.RecipeList.ingredients": "Ingredients"
+	"project.components.RecipeList.ingredients": "Ingredients",
+	"project.components.RecipeList.errorMsg": "Something went wrong, please try again!",
+	"project.components.RecipeList.notFoundMsg": "No recipe found!"
 }
