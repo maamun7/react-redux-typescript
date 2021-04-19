@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect';
-import { ApplicationRootState } from '../../types';
+import { ApplicationRootState } from '@types';
 import { initialState } from './reducer';
 
 const selectRecipe = (state: ApplicationRootState) => state.recipe || initialState;

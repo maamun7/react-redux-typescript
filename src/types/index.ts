@@ -2,10 +2,10 @@ import { RouterState } from 'connected-react-router';
 import { Reducer, Store } from 'redux';
 import { SagaInjectionModes } from 'redux-injectors';
 import { Saga } from 'redux-saga';
-import { GlobalState } from '../containers/App/types';
-import { ContainerState as LanguageProviderState } from '../containers/LanguageWrapper/types';
-import { ContainerState as SearchState } from '../components/Search/types';
-import { ContainerState as RecipeState } from '../containers/Recipe/types';
+import { ContainerState as LanguageProviderState } from '@containers/LanguageWrapper/types';
+import { ContainerState as SearchState } from '@components/Search/types';
+import { ContainerState as RecipeState } from '@containers/Recipe/types';
+import { GlobalState } from '@pages/App/types';
 
 export interface InjectedStoreParams extends Store {
 	injectedReducers: any;

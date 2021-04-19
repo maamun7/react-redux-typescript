@@ -1,10 +1,27 @@
 {
-	"presets": ["@babel/preset-env", "@babel/preset-react", "@babel/preset-typescript"],
+	"presets": ["@babel/preset-env", "@babel/preset-react", "@babel/preset-typescript", "module:metro-react-native-babel-preset"],
 	"plugins": [
 		[
 			"@babel/plugin-transform-runtime",
 			{
 				"regenerator": true
+			}
+		],
+		[
+			"module-resolver",
+			{
+				"root": ["./src"],
+				"extensions": [".js", ".jsx", ".ts", ".tsx", ".css"],
+				"alias": {
+					"@containers": "./src/containers",
+					"@components": "./src/components",
+					"@utils": "./src/utils",
+					"@styled": "./src/utils/styled",
+					"@store": "./src/store",
+					"@routes": "./src/routes",
+					"@pages": "./src/pages",
+					"@types": "./src/types"
+				}
 			}
 		]
 	]

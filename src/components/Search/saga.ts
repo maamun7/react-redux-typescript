@@ -1,6 +1,6 @@
 import { call, put, select, takeLatest } from 'redux-saga/effects';
 import { loadedRecipe, loadingRecipeError } from '../../containers/Recipe/actions';
-import { checkSession } from '../../containers/App/actions';
+import { checkSession } from '../../pages/App/actions';
 import { getSelectedSearchKey } from './selectors';
 import ActionTypes from './constants';
 import request from '../../utils/http-request';

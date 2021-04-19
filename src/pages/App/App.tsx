@@ -1,14 +1,12 @@
 import * as React from 'react';
+import styled from 'styled-components';
 import { Helmet } from 'react-helmet-async';
 import { hot } from 'react-hot-loader/root';
-import Header from '../../components/Layouts/Header';
-import LoadingIndicator from '../../components/LoadingIndicator';
-import styled from 'styled-components';
-import { ThemeProvider } from 'styled-components';
-import theme from './theme';
+import Header from '@components/Layouts/Header';
+import LoadingIndicator from '@components/LoadingIndicator';
+import Footer from '@components/Layouts/Footer';
+import Router from '@routes';
 import './style.css';
-import Footer from '../../components/Layouts/Footer';
-import Router from '../../routes';
 
 const AppWrapper = styled.div`
 	max-width: calc(768px + 16px * 2);

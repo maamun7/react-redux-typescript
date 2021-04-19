@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { Provider } from 'react-redux';
 import history from 'utils/history';
-import App from './containers/App';
+import App from './pages/App';
 import LanguageWrapper from './containers/LanguageWrapper';
 import { translationMessages } from './i18n';
 import { configStore } from './store/rootStore';

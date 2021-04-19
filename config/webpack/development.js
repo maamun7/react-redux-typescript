@@ -32,9 +32,12 @@ module.exports = require('./base')({
 		},
 	},
     resolve: {
-        alias: {
-            'react-dom': '@hot-loader/react-dom',
-        },
+		alias: {
+			'react-dom': '@hot-loader/react-dom',
+			containers: path.resolve(__dirname, 'containers'),
+			components: path.resolve(__dirname, 'components'),
+			routes: path.resolve(__dirname, 'routes'),
+		},
     },
 	plugins: [
         new CleanWebpackPlugin(),

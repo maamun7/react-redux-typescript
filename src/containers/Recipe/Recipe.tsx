@@ -1,11 +1,11 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { hot } from 'react-hot-loader/root';
 import { createStructuredSelector } from 'reselect';
-import RecipeList from '../../components/RecipeList';
-import { useSelector } from 'react-redux';
-import { getSelectedSearchKey } from '../../components/Search/selectors';
+import { getSelectedSearchKey } from '@components/Search/selectors';
+import { useInjectReducer } from '@utils/redux-injectors';
+import RecipeList from '@components/RecipeList';
 import { getRecipes, getRecipeSuccess, getRecipeError } from './selectors';
-import { useInjectReducer } from 'utils/redux-injectors';
 import recipeReducer from './reducer';
 
 const stateSelector = createStructuredSelector({

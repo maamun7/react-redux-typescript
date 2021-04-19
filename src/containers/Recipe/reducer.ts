@@ -1,4 +1,3 @@
-import { Reducer } from 'redux';
 import { ContainerState as RecipeState, ContainerActions as RecipeActions } from './types';
 import ActionTypes from './constants';
 

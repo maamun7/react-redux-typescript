@@ -137,10 +137,21 @@ module.exports = config => ({
 
     resolve: {
 		modules: ['node_modules', 'src'],
-		extensions: ['.js', '.jsx', '.ts', '.tsx'],
+		extensions: ['.js', '.jsx', '.ts', '.tsx', '.css'],
         symlinks: false,
         symlinks: false,
-        // plugins: [new TsconfigPathsPlugin()]
+		alias: {
+			containers: path.resolve(__dirname, 'containers'),
+			components: path.resolve(__dirname, 'components'),
+			routes: path.resolve(__dirname, 'routes'),
+			utils: path.resolve(__dirname, 'utils'),
+			styled: path.resolve(__dirname, 'utils/styled'),
+			store: path.resolve(__dirname, 'store'),
+			pages: path.resolve(__dirname, 'pages'),
+			types: path.resolve(__dirname, 'types'),
+		},
+        // plugins: [new TsconfigPathsPlugin()],
+		
     },
 
 	devtool: "inline-source-map",

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { injectIntl } from 'react-intl';
-import { useInjectReducer, useInjectSaga } from 'utils/redux-injectors';
+import { useInjectReducer, useInjectSaga } from '@utils/redux-injectors';
 import { loadRecipe, changeSearchKey } from './actions';
 import searchReducer from './reducer';
 import saga from './saga';

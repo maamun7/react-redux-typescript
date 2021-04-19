@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { FormattedMessage } from 'react-intl';
-import RecipeListItem from '../../containers/RecipeListItem';
-import ListItem from '../RecipeList/ListItem';
-import List from './List/';
+import RecipeListItem from '@containers/RecipeListItem';
+import ListItem from '@components/RecipeList/ListItem';
+import List from '@components/RecipeList/List';
 import messages from './messages';
 
 const RecipeList = ({ recipes, success, error }: { recipes: any; success: any; error: any }) => {
